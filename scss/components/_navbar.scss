@@ -1,75 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  @apply font-sans text-white relative;
-}
-
-.my_container {
-  @apply max-w-7xl mx-auto px-4;
-}
-
-input {
-  @apply w-full border border-gray-300 rounded px-4 py-3;
-}
-
-.site_overlay {
-  @apply absolute left-0 top-0 z-[-1];
-}
-
-.flex_left {
-  @apply flex flex-wrap items-center;
-}
-
-.flex_between {
-  @apply flex justify-between items-center flex-wrap;
-}
-
-.flex_center {
-  @apply flex justify-center items-center flex-wrap;
-}
-
-.flex_end {
-  @apply flex justify-end items-center flex-wrap;
-}
-
-.viewers {
-  @apply text-xs text-gray-500 font-semibold flex items-center space-x-1.5;
-}
-
-.genre_item {
-  @apply border-b border-gray-500 hover:text-amber-500;
-}
-
-.grid_list_2 {
-  @apply grid grid-cols-2 gap-2;
-}
-
-.grid_list_4 {
-  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3;
-}
-
-.grid_list_5 {
-  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2;
-}
-
-.bg-primary {
-  background-color: #0d2b64;
-}
-
-.bg-secondary {
-  background-color: #274375;
-}
-
-.max-w-8xl {
-  max-width: 88rem;
-}
-
 .navbar {
-  @apply bg-primary text-white;
-}
-.navbar.relative {
-  position: relative;
+    @apply bg-primary text-white;
+  &.relative {
+    position: relative;
+  }
 }
 
 .navbar_container {
@@ -106,10 +39,13 @@ input {
 
 .navbar_dropdown {
   @apply absolute px-6 left-0 top-full z-10 w-full overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+
+  &_1{
+    @apply absolute px-6 right-28 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  }
 }
-.navbar_dropdown_1 {
-  @apply absolute px-6 right-28 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
-}
+
+
 
 .navbar_dropdown_grid {
   @apply grid grid-cols-4 gap-4;
@@ -127,20 +63,32 @@ input {
   @apply font-bold text-2xl;
 }
 
-.navbar_dropdown_list_wrap {
-  @apply flex flex-wrap gap-4 font-semibold;
-}
-.navbar_dropdown_list_col {
-  @apply flex flex-col gap-4 font-semibold;
+.navbar_dropdown_list {
+
+  &_wrap{
+    @apply flex flex-wrap gap-4 font-semibold
+  }
+
+  &_col{
+    @apply flex flex-col gap-4 font-semibold
+  }
 }
 
 .navbar_end {
   @apply hidden lg:flex lg:flex-1 lg:justify-end lg:gap-2;
 }
 
+//.navbar_search_button {
+//  @apply;
+//}
+
 .navbar_search_icon {
   @apply size-6;
 }
+
+//.navbar_separator {
+//  @apply;
+//}
 
 .navbar_language {
   @apply relative cursor-pointer;
@@ -154,6 +102,10 @@ input {
   @apply my-2 py-2 text-base font-medium lg:mx-4;
 }
 
+//.navbar_language_icon {
+//  @apply;
+//}
+
 .navbar_language_dropdown {
   @apply invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible;
 }
@@ -161,6 +113,10 @@ input {
 .navbar_language_item {
   @apply my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2;
 }
+
+
+
+// Mobile
 
 .navbar_mobile_menu {
   @apply flex lg:hidden;
@@ -173,5 +129,3 @@ input {
 .navbar_mobile_icon {
   @apply h-6 w-6;
 }
-
-/*# sourceMappingURL=style.css.map */

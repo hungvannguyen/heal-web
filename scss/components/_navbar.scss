@@ -10,7 +10,7 @@
 }
 
 .navbar_logo {
-  @apply flex lg:flex-1;
+  @apply flex items-center gap-2;
 }
 
 .navbar_logo_link {
@@ -22,7 +22,7 @@
 }
 
 .navbar_menu {
-  @apply hidden lg:flex lg:gap-x-12;
+  @apply hidden lg:flex  lg:gap-x-6  xl:gap-x-12;
 }
 
 .navbar_menu_item {
@@ -44,8 +44,6 @@
     @apply absolute px-6 right-28 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
   }
 }
-
-
 
 .navbar_dropdown_grid {
   @apply grid grid-cols-4 gap-4;
@@ -75,8 +73,9 @@
 }
 
 .navbar_end {
-  @apply hidden lg:flex lg:flex-1 lg:justify-end lg:gap-2;
+  @apply hidden mx-2 justify-end lg:justify-center gap-2 lg:flex;
 }
+
 
 //.navbar_search_button {
 //  @apply;
@@ -86,9 +85,14 @@
   @apply size-6;
 }
 
-//.navbar_separator {
-//  @apply;
-//}
+.navbar_separator {
+  @apply my-auto;
+}
+
+.navbar_language_icon {
+  @apply size-6 my-auto;
+}
+
 
 .navbar_language {
   @apply relative cursor-pointer;
@@ -128,4 +132,8 @@
 
 .navbar_mobile_icon {
   @apply h-6 w-6;
+}
+
+.navbar_menu_mb {
+  @apply gap-y-4;
 }

@@ -119,6 +119,18 @@
 }
 
 
+.info{
+  @apply space-y-2;
+}
+
+.heading{
+  @apply text-lg font-bold;
+}
+
+.date{
+  @apply text-sm font-extralight;
+}
+
 
 // Mobile
 

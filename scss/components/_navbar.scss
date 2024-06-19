@@ -1,8 +1,5 @@
 .navbar {
-    @apply bg-primary text-white;
-  &.relative {
-    position: relative;
-  }
+    @apply bg-primary text-white relative;
 }
 
 .navbar_container {
@@ -41,7 +38,14 @@
   @apply absolute px-6 left-0 top-full z-10 w-full overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
 
   &_1{
-    @apply absolute px-6 right-28 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+    @apply absolute right-36 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  }
+}
+
+.navbar_dropdown_search{
+  @apply absolute right-80 top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  input{
+    @apply bg-secondary text-white p-4;
   }
 }
 
@@ -131,15 +135,42 @@
   @apply text-sm font-extralight;
 }
 
+.language_item{
+  @apply block px-4 py-2 text-sm;
 
-// Mobile
+  &:hover{
+    @apply bg-gray-200 text-primary;
+  }
+}
+
+
+  // Mobile
+.navbar_mobile_container{
+  @apply fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary  py-6 sm:ring-1 sm:ring-gray-900/10;
+}
+
+.navbar_mobile_header {
+  @apply flex items-center justify-between px-6;
+}
+
+.navbar_mobile_body {
+  @apply mt-6 flow-root -my-6 py-6 relative space-y-6;
+
+  &_top{
+    @apply flex justify-between py-2 px-6;
+  }
+
+  &_bottom{
+    @apply -mx-3 px-4;
+  }
+}
 
 .navbar_mobile_menu {
   @apply flex lg:hidden;
 }
 
 .navbar_mobile_button {
-  @apply -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700;
+  @apply -m-2.5 inline-flex items-center justify-center rounded-md p-2.5;
 }
 
 .navbar_mobile_icon {
@@ -148,4 +179,39 @@
 
 .navbar_menu_mb {
   @apply gap-y-4;
+}
+
+.navbar_mobile_list{
+  @apply space-y-6;
+}
+
+.navbar_mobile_list_1{
+  @apply space-y-4 mt-2 outline-1;
+}
+.navbar_mobile_list_2{
+  @apply flex flex-wrap gap-8 mx-auto px-12 py-4;
+}
+
+.navbar_mobile_list_2_1{
+  @apply ml-6 mt-2 space-y-4 px-8;
+}
+
+.navbar_mobile_list_3{
+  @apply flex flex-col space-y-2;
+}
+
+.navbar_mobile_list_item{
+  @apply flex justify-between my-auto px-6;
+
+  span{
+    @apply font-bold;
+  }
+}
+
+.navbar_mobile_list_item_1{
+  @apply flex justify-between my-auto ml-2 px-6;
+
+  span{
+    @apply font-bold;
+  }
 }

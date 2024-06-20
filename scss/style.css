@@ -70,6 +70,11 @@ input {
   max-width: 88rem;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navbar {
   @apply bg-primary text-white relative;
 }

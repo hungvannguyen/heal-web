@@ -25,11 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!dropdownMenu.classList.contains('flex') && !dropdownMenu.classList.contains('flex-wrap') && dropdownMenu.classList.contains('hidden')) {
                     console.log('targetList true', dropdownMenu);
                     dropdownMenu.classList.remove('hidden');
-                    dropdownMenu.classList.add('flex');
                     dropdownMenu.classList.add('flex-wrap');
                 } else {
                     console.log('targetList false', dropdownMenu);
-                    dropdownMenu.classList.remove('flex');
                     dropdownMenu.classList.remove('flex-wrap');
                     dropdownMenu.classList.add('hidden');
                 }
@@ -38,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('After toggle classes:', dropdownMenu.classList);
             }
 
-            if(dropdownMenu && dropdownMenu.classList.contains('collapse-target')){
-                return;
+            if(dropdownMenu && !dropdownMenu.classList.contains('collapse-target')){
+                dropdownMenu.classList.toggle('hidden');
             }
-            dropdownMenu.classList.toggle('hidden');
+
             currentOpenDropdown = dropdownMenu.classList.contains('hidden') ? null : dropdownMenu;
         });
     });

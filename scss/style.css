@@ -275,7 +275,7 @@ input {
 }
 
 .footer_grid {
-  @apply grid grid-cols-1 p-6 sm:grid-cols-2 lg:grid-cols-4 gap-10;
+  @apply grid grid-cols-1 p-6 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-10;
 }
 
 .footer_heading {
@@ -287,7 +287,7 @@ input {
 }
 
 .footer_report_item {
-  @apply mt-10;
+  @apply mt-10 md:text-sm;
 }
 
 .footer_report_link {

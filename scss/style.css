@@ -57,6 +57,11 @@ input {
   background-color: #0d2b64;
 }
 
+.bg-primary-80 {
+  background-color: #0d2b64;
+  opacity: 0.8;
+}
+
 .bg-secondary {
   background-color: #274375;
 }
@@ -105,22 +110,22 @@ input {
   @apply absolute px-6 left-0 top-full z-10 w-full overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
 }
 .navbar_dropdown_1 {
-  @apply absolute right-36 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  @apply absolute right-10 top-20 lg:right-36 lg:top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
 }
 
 .navbar_dropdown_search {
-  @apply absolute right-80 top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  @apply absolute top-40 lg:right-80 lg:top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
 }
 .navbar_dropdown_search input {
   @apply bg-secondary text-white p-4;
 }
 
 .navbar_dropdown_grid {
-  @apply grid grid-cols-4 gap-4;
+  @apply grid grid-cols-4 gap-2 px-28;
 }
 
 .navbar_dropdown_section {
-  @apply text-white space-y-6 py-6 px-14 border-l;
+  @apply text-white space-y-6 py-6 px-8 border-l last:border-r;
 }
 
 .navbar_dropdown_section_2 {
@@ -202,13 +207,13 @@ input {
 }
 
 .navbar_mobile_body {
-  @apply mt-6 flow-root -my-6 py-6 relative space-y-6;
+  @apply mt-6 flow-root justify-center py-6 relative;
 }
-.navbar_mobile_body_top {
-  @apply flex justify-between py-2 px-6;
-}
-.navbar_mobile_body_bottom {
+.navbar_mobile_body_container {
   @apply -mx-3 px-4;
+}
+.navbar_mobile_body_first {
+  @apply flex justify-between px-6 pt-2;
 }
 
 .navbar_mobile_menu {
@@ -227,8 +232,8 @@ input {
   @apply gap-y-4;
 }
 
-.navbar_mobile_list {
-  @apply space-y-6;
+.navbar_mobile_list_wrap {
+  @apply border-t py-4 last:border-b;
 }
 
 .navbar_mobile_list_1 {
@@ -236,7 +241,7 @@ input {
 }
 
 .navbar_mobile_list_2 {
-  @apply flex flex-wrap gap-8 mx-auto px-12 py-4;
+  @apply gap-8 mx-auto px-12 py-4;
 }
 
 .navbar_mobile_list_2_1 {
@@ -248,7 +253,7 @@ input {
 }
 
 .navbar_mobile_list_item {
-  @apply flex justify-between my-auto px-6;
+  @apply flex justify-between  px-6;
 }
 .navbar_mobile_list_item span {
   @apply font-bold;
@@ -322,13 +327,13 @@ input {
   @apply flex justify-center items-center;
 }
 .banner_title {
-  @apply block text-center text-white sm:text-4xl md:text-6xl font-bold w-fit bg-primary p-3;
+  @apply block text-center text-white sm:text-4xl md:text-6xl font-bold w-fit bg-primary-80 p-3;
 }
 .banner_button_container {
   @apply flex justify-center mb-2 mt-4 md:mb-20;
 }
 .banner_button {
-  @apply bg-primary text-white px-4 py-2 rounded-md;
+  @apply bg-primary-80 text-white px-4 py-2 rounded-md text-lg md:text-3xl font-bold;
 }
 
 .content-section {
@@ -339,43 +344,6 @@ input {
 }
 .content-heading {
   @apply flex justify-between border-b-2 pb-3;
-}
-
-.card-section {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-10 mt-4;
-}
-.card-section-1 {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4;
-}
-.card-section-2 {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-10;
-}
-.card-position-left {
-  @apply flex flex-col;
-}
-.card-container {
-  @apply bg-quaternary;
-}
-.card-container-1 {
-  @apply flex;
-}
-.card-info {
-  @apply mt-4 mx-2 p-6;
-}
-.card-info-1 {
-  @apply mt-4 mx-2;
-}
-.card-info-2 {
-  @apply mt-4 mx-6;
-}
-.card-date {
-  @apply flex gap-2 my-2;
-}
-.card-date span {
-  @apply font-extralight text-sm text-primary;
-}
-.card-heading a {
-  @apply text-lg text-primary font-semibold;
 }
 
 .modal {
@@ -392,6 +360,55 @@ input {
 
 .modal .modal_content {
   @apply relative px-6 py-12 bg-white;
+}
+
+.card-section {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-10 mt-4;
+}
+.card-section-1 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4;
+}
+.card-section-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10;
+}
+.card-position-left {
+  @apply flex flex-col;
+}
+.card-container {
+  @apply bg-quaternary;
+}
+.card-container-1 {
+  @apply bg-quaternary flex;
+}
+.card-container-1 a {
+  @apply flex gap-4;
+}
+.card-container-2 {
+  @apply bg-quaternary md:flex;
+}
+.card-container-2 a {
+  @apply flex gap-4;
+}
+.card-image {
+  @apply w-full h-full lg:max-h-[180px] object-cover;
+}
+.card-info {
+  @apply mt-4 mx-2 p-6;
+}
+.card-info-1 {
+  @apply my-2 mx-6;
+}
+.card-info-2 {
+  @apply my-4 mx-6;
+}
+.card-date {
+  @apply flex gap-2 my-2;
+}
+.card-date span {
+  @apply font-extralight text-sm text-primary;
+}
+.card-heading a {
+  @apply text-lg text-primary font-semibold;
 }
 
 /*# sourceMappingURL=style.css.map */

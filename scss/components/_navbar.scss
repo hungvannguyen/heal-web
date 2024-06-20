@@ -38,23 +38,24 @@
   @apply absolute px-6 left-0 top-full z-10 w-full overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
 
   &_1{
-    @apply absolute right-36 top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+    @apply absolute right-10 top-20 lg:right-36 lg:top-full z-10 w-44 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
   }
 }
 
 .navbar_dropdown_search{
-  @apply absolute right-80 top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  @apply absolute top-40 lg:right-80 lg:top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
   input{
     @apply bg-secondary text-white p-4;
   }
 }
 
 .navbar_dropdown_grid {
-  @apply grid grid-cols-4 gap-4;
+  @apply grid grid-cols-4 gap-2 px-28;
+
 }
 
 .navbar_dropdown_section {
-  @apply text-white space-y-6 py-6 px-14 border-l;
+  @apply text-white space-y-6 py-6 px-8 border-l last:border-r;
 }
 
 .navbar_dropdown_section_2 {
@@ -154,14 +155,13 @@
 }
 
 .navbar_mobile_body {
-  @apply mt-6 flow-root -my-6 py-6 relative space-y-6;
+  @apply mt-6 flow-root justify-center py-6 relative;
 
-  &_top{
-    @apply flex justify-between py-2 px-6;
-  }
-
-  &_bottom{
+  &_container{
     @apply -mx-3 px-4;
+  }
+  &_first{
+    @apply flex justify-between px-6 pt-2;
   }
 }
 
@@ -182,14 +182,16 @@
 }
 
 .navbar_mobile_list{
-  @apply space-y-6;
+  &_wrap{
+    @apply border-t py-4 last:border-b;
+  }
 }
 
 .navbar_mobile_list_1{
   @apply space-y-4 mt-2 outline-1;
 }
 .navbar_mobile_list_2{
-  @apply flex flex-wrap gap-8 mx-auto px-12 py-4;
+  @apply gap-8 mx-auto px-12 py-4;
 }
 
 .navbar_mobile_list_2_1{
@@ -201,7 +203,7 @@
 }
 
 .navbar_mobile_list_item{
-  @apply flex justify-between my-auto px-6;
+  @apply flex justify-between  px-6;
 
   span{
     @apply font-bold;

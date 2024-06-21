@@ -200,11 +200,11 @@ input {
   @apply block px-4 py-2 text-sm;
 }
 .language_item:hover {
-  @apply bg-gray-200 text-primary;
+  @apply bg-quaternary text-primary;
 }
 
 .navbar_mobile_container {
-  @apply fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary  py-6 sm:ring-1 sm:ring-gray-900/10;
+  @apply fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary py-6 px-2 sm:ring-1 sm:ring-gray-900/10;
 }
 
 .navbar_mobile_header {
@@ -341,37 +341,33 @@ input {
   @apply bg-primary-80 text-white px-4 py-2 rounded-md text-lg md:text-3xl font-bold;
 }
 
-.content-section {
+.content-section-1 {
   @apply max-w-7xl mx-auto my-20 space-y-20;
 }
-.content-section h2, .content-section a {
-  @apply text-2xl font-bold leading-loose text-primary;
+.content-section-2 {
+  @apply max-w-8xl mx-auto p-6 lg:px-8;
 }
-.content-heading {
+.content-heading-1 {
   @apply flex justify-between border-b-2 pb-3;
 }
-
-.modal {
-  @apply fixed inset-0 z-50 opacity-0 invisible top-0 -translate-y-full transition-all;
+.content-heading-1 h2, .content-heading-1 a {
+  @apply text-2xl font-bold leading-loose text-primary;
 }
-
-.modal.show {
-  @apply opacity-100 visible translate-y-0;
+.content-heading-2 {
+  @apply pb-3;
 }
-
-.modal .overlay {
-  @apply absolute inset-0 bg-gray-900/20 backdrop-blur transition-all;
+.content-heading-2 h2 {
+  @apply text-[50px] font-bold leading-loose text-primary;
 }
-
-.modal .modal_content {
-  @apply relative px-6 py-12 bg-white;
+.content-heading-2 span {
+  @apply leading-loose text-black;
 }
 
 .card-section {
   @apply grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-10 mt-4;
 }
 .card-section-1 {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4;
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-4;
 }
 .card-section-2 {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10;
@@ -414,6 +410,92 @@ input {
 }
 .card-heading a {
   @apply text-lg text-primary font-semibold;
+}
+
+.breadcrumb-container {
+  @apply flex mx-auto max-w-8xl p-6 lg:px-8;
+}
+
+.breadcrumb-list {
+  @apply inline-flex items-center space-x-1;
+}
+
+.breadcrumb-item {
+  @apply inline-flex items-center;
+}
+
+.breadcrumb-link {
+  @apply inline-flex text-sm font-bold text-black hover:underline;
+}
+
+.breadcrumb-separator {
+  @apply flex items-center;
+}
+
+.breadcrumb-separator-icon {
+  @apply mx-2.5 text-gray-800;
+}
+
+.search-container {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-4 p-12 mt-4 mb-12 bg-quaternary;
+}
+
+.search-item-1 {
+  @apply col-span-1 md:col-span-4;
+}
+.search-item-2 {
+  @apply col-span-1 md:col-span-2;
+}
+
+.search-input {
+  @apply w-full p-4 placeholder:text-black outline outline-offset-1 outline-black drop-shadow-lg rounded;
+}
+
+.search-box-dropdown-wrapper {
+  @apply w-full outline outline-offset-1 outline-black drop-shadow-lg rounded;
+}
+.search-box-dropdown-container {
+  @apply relative cursor-pointer;
+}
+.search-box-dropdown-toggle {
+  @apply flex items-center justify-between space-x-5 bg-white px-4 z-10;
+}
+.search-box-dropdown-placeholder {
+  @apply my-2 py-2 text-base text-black lg:mx-4;
+}
+.search-box-dropdown-menu {
+  @apply absolute w-full overflow-scroll max-h-96 bg-white flex-col shadow-xl;
+}
+.search-box-dropdown-item {
+  @apply my-2 block border-b border-gray-100 py-2 px-8 font-semibold text-black hover:bg-quaternary hover:text-primary;
+}
+
+.pagination-container {
+  @apply flex flex-col sm:flex-row justify-center sm:justify-between mx-auto mt-8 border border-black p-6 gap-4;
+}
+
+.pagination-navigation {
+  @apply flex justify-center gap-6 my-auto;
+}
+
+.pagination-button {
+  @apply flex items-center justify-center;
+}
+
+.pagination-icon {
+  @apply w-6 h-6;
+}
+
+.pagination-input {
+  @apply flex gap-4 text-black;
+}
+
+.page-input {
+  @apply border-b border-t-0 border-l-0 border-r-0 h-8 w-16;
+}
+
+.pagination-info {
+  @apply my-auto text-black hidden sm:block;
 }
 
 /*# sourceMappingURL=style.css.map */

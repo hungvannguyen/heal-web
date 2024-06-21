@@ -1,15 +1,35 @@
 .content{
   &-section{
-    @apply max-w-7xl mx-auto my-20 space-y-20;
+    &-1{
+      @apply max-w-7xl mx-auto my-20 space-y-20;
 
-    h2, a {
-      @apply text-2xl font-bold leading-loose text-primary;
+    }
+    &-2{
+      @apply max-w-8xl mx-auto p-6 lg:px-8;
     }
 
   }
 
   &-heading{
-    @apply flex justify-between border-b-2 pb-3;
+    &-1{
+      @apply flex justify-between border-b-2 pb-3;
+
+      h2, a {
+        @apply text-2xl font-bold leading-loose text-primary;
+      }
+    }
+
+    &-2{
+      @apply pb-3;
+
+      h2{
+        @apply text-[50px] font-bold leading-loose text-primary;
+      }
+      span{
+        @apply leading-loose text-black;
+      }
+    }
+
   }
 }
 

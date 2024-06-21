@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 dropdownMenu.classList.toggle('hidden');
             }
 
+
             currentOpenDropdown = dropdownMenu.classList.contains('hidden') ? null : dropdownMenu;
         });
     });

@@ -76,7 +76,7 @@ input {
 }
 
 .navbar {
-  @apply bg-primary text-white relative;
+  @apply bg-primary text-white relative z-40;
 }
 
 .navbar_container {
@@ -119,7 +119,7 @@ input {
 }
 
 .navbar_dropdown_search {
-  @apply absolute top-40 lg:right-80 lg:top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  @apply absolute top-44 lg:right-80 lg:top-[86px] z-50 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg;
 }
 .navbar_dropdown_search input {
   @apply bg-secondary text-white p-4;
@@ -348,7 +348,7 @@ input {
   @apply max-w-8xl mx-auto p-6 lg:px-8;
 }
 .content-heading-1 {
-  @apply flex justify-between border-b-2 pb-3;
+  @apply flex justify-between border-b border-black pb-3;
 }
 .content-heading-1 h2, .content-heading-1 a {
   @apply text-2xl font-bold leading-loose text-primary;
@@ -357,7 +357,7 @@ input {
   @apply pb-3;
 }
 .content-heading-2 h2 {
-  @apply text-[50px] font-bold leading-loose text-primary;
+  @apply text-[50px] font-bold leading-normal text-primary mb-8;
 }
 .content-heading-2 span {
   @apply leading-loose text-black;

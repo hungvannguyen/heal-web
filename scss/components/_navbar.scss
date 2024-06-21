@@ -1,5 +1,5 @@
 .navbar {
-    @apply bg-primary text-white relative;
+    @apply bg-primary text-white relative z-40;
 }
 
 .navbar_container {
@@ -43,7 +43,7 @@
 }
 
 .navbar_dropdown_search{
-  @apply absolute top-40 lg:right-80 lg:top-[86px] z-10 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg ring-1 ring-gray-900/5;
+  @apply absolute top-44 lg:right-80 lg:top-[86px] z-50 w-full lg:w-96 overflow-hidden bg-secondary shadow-lg;
   input{
     @apply bg-secondary text-white p-4;
   }

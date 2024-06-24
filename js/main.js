@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Drop down
     const navbarDropdowns = document.querySelectorAll('[data-collapse-toggle]');
+
     let currentOpenDropdown = null;
+    let activeItems = {};
 
     navbarDropdowns.forEach(button => {
         button.addEventListener('click', function (event) {
@@ -10,11 +14,41 @@ document.addEventListener('DOMContentLoaded', function () {
             const mobileMenu = document.getElementById('mobile-menu');
             const collapsibleElements = document.getElementsByClassName('collapsible');
             const dropdownMenu = document.getElementById(menuId);
-            console.log(menuId);
-            console.log(dropdownMenu);
+            const dataValues = dropdownMenu.querySelectorAll('[data-value]');
+
+
+            dataValues.forEach(dataValue => {
+                dataValue.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                    const dataValueId = dataValue.getAttribute('data-value');
+
+                    const placeholder = button.querySelector('.search-box-dropdown-placeholder');
+
+                    placeholder.textContent = dataValueId;
+
+                        if (!activeItems[menuId]) {
+
+                            activeItems[menuId] = dataValueId;
+                            console.log('activeItems',activeItems);
+                        } else {
+                            delete activeItems[menuId];
+                            activeItems[menuId] = dataValueId;
+                            console.log('activeItems delete',activeItems);
+                            dataValues.forEach(dataValue => {
+                                dataValue.classList.remove('bg-quaternary');
+                            });
+                        }
+
+                    dataValue.classList.add('bg-quaternary');
+
+                    dropdownMenu.classList.add('hidden');
+                }
+                )
+            });
+
             if (currentOpenDropdown && currentOpenDropdown !== dropdownMenu && mobileMenu.classList.contains('hidden') || !mobileMenu.classList.contains('lg:hidden')) {
                 currentOpenDropdown.classList.add('hidden');
-                console.log('currentOpenDropdown 1', currentOpenDropdown);
+                console.log('currentOpenDropdown', currentOpenDropdown);
             }
 
             if (dropdownMenu && dropdownMenu.classList.contains('collapse-target')) {
@@ -44,4 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             currentOpenDropdown = dropdownMenu.classList.contains('hidden') ? null : dropdownMenu;
         });
     });
+
+//     Select dropdown
+
 });

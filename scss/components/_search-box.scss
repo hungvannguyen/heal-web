@@ -26,7 +26,7 @@
     }
 
     &-toggle{
-      @apply flex items-center justify-between space-x-5 bg-white px-4 z-10;
+      @apply flex w-full items-center justify-between space-x-5 bg-white px-4 z-10;
     }
 
     &-placeholder{

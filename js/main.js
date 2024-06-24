@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const dropdownMenu = document.getElementById(menuId);
             const dataValues = dropdownMenu.querySelectorAll('[data-value]');
 
-
+            // Search-box dropdown
             dataValues.forEach(dataValue => {
                 dataValue.addEventListener('click', function (event) {
                     event.stopPropagation();
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (!activeItems[menuId]) {
 
                             activeItems[menuId] = dataValueId;
-                            console.log('activeItems',activeItems);
+
                         } else {
                             delete activeItems[menuId];
                             activeItems[menuId] = dataValueId;
-                            console.log('activeItems delete',activeItems);
+
                             dataValues.forEach(dataValue => {
                                 dataValue.classList.remove('bg-quaternary');
                             });
@@ -48,26 +48,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (currentOpenDropdown && currentOpenDropdown !== dropdownMenu && mobileMenu.classList.contains('hidden') || !mobileMenu.classList.contains('lg:hidden')) {
                 currentOpenDropdown.classList.add('hidden');
-                console.log('currentOpenDropdown', currentOpenDropdown);
+
             }
 
             if (dropdownMenu && dropdownMenu.classList.contains('collapse-target')) {
-                // In ra các lớp của dropdownMenu trước khi kiểm tra điều kiện
-                console.log('Before toggle classes:', dropdownMenu.classList);
 
-                // Toggle các lớp ngay lập tức
                 if (!dropdownMenu.classList.contains('flex') && !dropdownMenu.classList.contains('flex-wrap') && dropdownMenu.classList.contains('hidden')) {
-                    console.log('targetList true', dropdownMenu);
                     dropdownMenu.classList.remove('hidden');
                     dropdownMenu.classList.add('flex-wrap');
                 } else {
-                    console.log('targetList false', dropdownMenu);
                     dropdownMenu.classList.remove('flex-wrap');
                     dropdownMenu.classList.add('hidden');
                 }
-
-                // In ra các lớp của dropdownMenu sau khi kiểm tra điều kiện
-                console.log('After toggle classes:', dropdownMenu.classList);
             }
 
             if(dropdownMenu && !dropdownMenu.classList.contains('collapse-target')){
@@ -78,7 +70,5 @@ document.addEventListener('DOMContentLoaded', function () {
             currentOpenDropdown = dropdownMenu.classList.contains('hidden') ? null : dropdownMenu;
         });
     });
-
-//     Select dropdown
 
 });
